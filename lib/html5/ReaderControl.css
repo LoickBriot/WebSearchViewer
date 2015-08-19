@@ -521,7 +521,7 @@ input, select {
 
 #fullSearchView{
     border: 1px solid #C0C0C0;
-    /*    width: 190px;*/
+    width: 190px;
     overflow-y: auto;
     overflow-x: hidden;
 
@@ -573,7 +573,7 @@ input, select {
 .thumbContainer.selected, .bookmarkWrapper.selected, .searchResultLine.selected,
 .ui-buttonset label.ui-state-active {
     /* color for UI active selection */
-    background: #CBE6EF !important;
+    background: #FF0000;
 }
 
 /*.searchResultLine:hover, .thumbContainer:hover, .bookmarkWrapper:hover{
@@ -583,7 +583,7 @@ input, select {
 .searchResultLine{	
     border-style: solid;
     border-color: silver;
-    border-width: 0 0 1px 0 !important;
+    border-width: 0 0 1px;
     cursor:pointer;
 
 }

@@ -7,8 +7,10 @@
 
    
 (function() {
-	var custom = window.ControlUtils.getCustomData();
-	//console.log(custom)
+	
+	var word = window.ControlUtils.getCustomData();
+	
+	
 	$.extend(ReaderControl.config, {
         //configuration options go here
         customScript : 'defaultScriptExtension.js',
@@ -32,10 +34,6 @@
 	$('<ul>').addClass('ui-widget ui-menu-dropdown').attr('id', 'optionsMenuList').hide()
 		.append("<li data-lang='fr'><a href=\"javascript:void(0)\">Français</a></li>")
         .append("<li data-lang='en'><a href=\"javascript:void(0)\">English</a></li>")
-        .append("<li data-lang='ru'><a href=\"javascript:void(0)\">Русский</a></li>")
-        .append("<li data-lang='pt_br'><a href=\"javascript:void(0)\">Português Brasileiro</a></li>")
-        .append("<li data-lang='es'><a href=\"javascript:void(0)\">Español</a></li>")
-        .append("<li data-lang='gl'><a href=\"javascript:void(0)\">Galego</a></li>")
         .menu({
             select: function(event, ui) {
                 var languageCode = $(ui.item).data('lang');
@@ -82,8 +80,10 @@
     }); 
 	
 	$(document).on('documentLoaded', function() {
-		search(custom);
-    });   
+		search(word);
+    });  
+
+	
 	
 	
 })();

@@ -16,15 +16,16 @@
 				type: "html5",
 				path: "../../lib",
 				html5Path: "html5/ReaderControl.html",
-				initialDoc: "http://localhost/WebViewer/accueil.pdf",
-				config: "config.js",
+				initialDoc: "http://localhost/WebSearchViewer/accueil.pdf",
+				//config: "config_index.js",
 				showToolbarControl: false,
+				showSidePanel: false,
 				enableReadOnlyMode: true
 			}, viewerElement);	
 		
+	
 		
 		$('#mainRunSearchButton').on('click', function() {
-			
 			// rediriger vers la page search.php avec ('#searchText').val();
 			window.location.replace('search.php');
         });
@@ -33,6 +34,7 @@
 		$(viewerElement).on("toolModeChanged", function(event) {
 			myWebViewer.setToolMode(PDFTron.WebViewer.ToolMode.Pan);
 		});
+				
 					
 });
     </script>
@@ -48,6 +50,7 @@
 			Texte recherché : 
 			<input type="text" name="fullSearch" id="#searchText" />
 			<input id="mainRunSearchButton" type="submit" value="Lancer la recherche"/>
+			<!--<input type="checkbox" name="wholeWord" id="#wholeWord" value="true" checked> Mot en entier-->
 		</form>
 		<p></p>
 	</div>
